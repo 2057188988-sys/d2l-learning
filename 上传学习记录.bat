@@ -2,6 +2,17 @@
 chcp 65001 >nul
 cd /d "%~dp0"
 
+rem ---- 代理设置：部分网络（如手机热点）无法直连 github.com ----
+rem 如果你的代理端口变了，改下面这个数字即可。
+set "PROXY_PORT=65532"
+curl -s -o nul --max-time 6 https://github.com >nul 2>&1
+if errorlevel 1 (
+    set "HTTPS_PROXY=http://127.0.0.1:%PROXY_PORT%"
+    set "HTTP_PROXY=http://127.0.0.1:%PROXY_PORT%"
+    echo [INFO] 无法直连 GitHub，改用代理 127.0.0.1:%PROXY_PORT%
+    echo.
+)
+
 echo ============================================
 echo   Upload study records to GitHub
 echo ============================================
