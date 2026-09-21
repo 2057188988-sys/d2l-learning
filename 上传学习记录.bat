@@ -2,14 +2,15 @@
 chcp 65001 >nul
 cd /d "%~dp0"
 
-rem ---- 代理设置：部分网络（如手机热点）无法直连 github.com ----
-rem 如果你的代理端口变了，改下面这个数字即可。
+rem ---- Proxy fallback ----
+rem Some networks (e.g. mobile hotspot) cannot reach github.com directly.
+rem If your proxy uses a different port, change PROXY_PORT below.
 set "PROXY_PORT=65532"
 curl -s -o nul --max-time 6 https://github.com >nul 2>&1
 if errorlevel 1 (
     set "HTTPS_PROXY=http://127.0.0.1:%PROXY_PORT%"
     set "HTTP_PROXY=http://127.0.0.1:%PROXY_PORT%"
-    echo [INFO] 无法直连 GitHub，改用代理 127.0.0.1:%PROXY_PORT%
+    echo [INFO] Direct GitHub unreachable. Using proxy 127.0.0.1:%PROXY_PORT%
     echo.
 )
 
@@ -31,7 +32,6 @@ if errorlevel 1 (
     echo [ERROR] No remote "origin" configured.
     echo         Run this once:
     echo         git remote add origin https://github.com/YOUR_NAME/YOUR_REPO.git
-    echo         git branch -M main
     pause
     exit /b 1
 )
