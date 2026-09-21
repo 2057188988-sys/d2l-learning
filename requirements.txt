@@ -1,0 +1,4 @@
+torch
+torchvision
+d2l
+jupyter
