@@ -17,7 +17,7 @@
 │   ├── 01_深度学习基础/              #   第 1–5 章
 │   └── 02_卷积神经网络/              #   第 6 章起
 ├── deep_learning_terms.md           # 深度学习术语表
-├── python_pytorch_notes_*.md        # 早期专题笔记（内容已并入 深度学习/）
+├── python_pytorch_notes.md          # 早期专题笔记（内容已并入 深度学习/）
 ├── pytorch记录.md                    # 学习工作流说明（记录方法、简历转化）
 ├── requirements.txt                 # 环境依赖
 ├── 启动Jupyter.bat                   # 一键启动 Notebook

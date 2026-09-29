@@ -1,10 +1,12 @@
-# Python + PyTorch 学习笔记（2026-09-21）
+# Python + PyTorch 学习笔记
+
+早期专题笔记，持续追加。按主题分节，每节标题标注记录日期。
 
 本次学习围绕「张量操作 → Python 切片 → NumPy → CSV → 路径处理 → 环境优化」这条线，从 PyTorch 报错出发，一路补到工程实践。
 
 ---
 
-## 一、PyTorch 张量操作
+## 一、PyTorch 张量操作（2026-09-21）
 
 ### 1. `reshape`：形状的乘积必须等于元素总数
 
@@ -80,7 +82,7 @@ print('id(Z):', id(Z))     # 还是地址 A
 
 ---
 
-## 二、Python 切片（slice）语法
+## 二、Python 切片（slice）语法（2026-09-21）
 
 ### 1. 基本形式
 
@@ -172,7 +174,7 @@ s[::-1]     # "hcroT yP"
 
 ---
 
-## 三、NumPy 是什么
+## 三、NumPy 是什么（2026-09-21）
 
 **一句话：NumPy 是 Python 做科学计算的基础库，核心是 `ndarray`（N 维数组）。**
 
@@ -231,7 +233,7 @@ n = t.numpy()              # Tensor → ndarray
 
 ---
 
-## 四、CSV 文件
+## 四、CSV 文件（2026-09-21）
 
 **一句话：CSV 是一个纯文本文件，用逗号把数据隔开，一行代表一条记录。**
 
@@ -297,7 +299,7 @@ with open("score.csv", encoding="utf-8") as f:
 
 ---
 
-## 五、路径处理
+## 五、路径处理（2026-09-21）
 
 ### 1. `os.path.join`
 
@@ -544,7 +546,7 @@ p1.resolve() == p2.resolve()  # True   ← 规范化后一样
 
 ---
 
-## 六、环境小技巧：一键启动 Jupyter
+## 六、环境小技巧：一键启动 Jupyter（2026-09-21）
 
 **痛点**：每次要开 Git Bash → `cd /c/sites/pytorch` → 输入 `jupyter notebook`。
 
