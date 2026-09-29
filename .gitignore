@@ -17,3 +17,7 @@ data/
 # 系统文件
 Thumbs.db
 desktop.ini
+# Obsidian 工作区状态（每次开关都变）
+深度学习/.obsidian/workspace.json
+深度学习/.obsidian/graph.json
+
